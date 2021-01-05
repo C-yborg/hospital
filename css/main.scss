@@ -1,0 +1,95 @@
+@charset "UTF-8";
+@import './sassConfig.scss';
+
+#slide-wrap {
+    position: relative;
+    overflow: hidden;
+}
+.slide-content {
+    position: relative;
+    @include webkit(transition, all 1s ease-in 0s);
+     li {
+         float: left;
+     }
+}
+
+.slide-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    z-index: 2;
+    text-align: center;
+    font-size: 0;
+    a {
+        display: inline-block;
+        width: 8px;
+        height: 3px;
+        margin: 0 3px;
+        background-color: #fff;
+        opacity: .5;
+        filter: alpha(opacity = 50); //兼容
+        &.current {
+            opacity: 1;
+            filter: alpha(opacit = 100);
+        }
+    }
+}
+.slide-prev, .slide-next {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    line-height: 50px;
+    text-align: center;
+    color: blueviolet;
+    cursor: pointer;
+    font-size: 24px;
+    background-color: #fff;
+}
+
+.slide-prev { left: 20px; }
+.slide-next { right: 20px; }
+
+//图文列表
+.info-list {
+    padding: 0 45px;
+    figure {
+        padding: 0 25px;
+        float: left;
+        width: 33.33333%;
+        @include webkit(box-sizing,border-box);
+    }
+    img {
+        width: 100%;
+    }
+    figcaption {
+        margin-bottom: 11px;
+        padding: 24px 0 10px;
+        font-size: 18px;
+        border-bottom: 1px solid #d9d9d9;
+    }
+    p {
+        line-height: 22px;
+        color: $text-gray;
+    }
+}
+
+.more-link {
+    display: block;
+    width: 108px;
+    height: 37px;
+    margin: 55px auto 90px;
+    border: 1px solid #e8e8e8;
+    border-radius: 100px;
+    line-height: 35px;
+    text-align: center;
+    color: $text-gray;
+    @include webkit(transition,all .3s ease 0s);
+    &:hover {
+        background-color: $color-main;
+        color: #fff;
+        border-color: $color-main;
+    }
+}

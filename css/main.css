@@ -1,0 +1,94 @@
+#slide-wrap {
+  position: relative;
+  overflow: hidden; }
+
+.slide-content {
+  position: relative;
+  -webkit-transition: all 1s ease-in 0s;
+  -moz-transition: all 1s ease-in 0s;
+  -ms-transition: all 1s ease-in 0s;
+  -o-transition: all 1s ease-in 0s;
+  transition: all 1s ease-in 0s; }
+  .slide-content li {
+    float: left; }
+
+.slide-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 15px;
+  z-index: 2;
+  text-align: center;
+  font-size: 0; }
+  .slide-nav a {
+    display: inline-block;
+    width: 8px;
+    height: 3px;
+    margin: 0 3px;
+    background-color: #fff;
+    opacity: .5;
+    filter: alpha(opacity=50); }
+    .slide-nav a.current {
+      opacity: 1;
+      filter: alpha(opacit=100); }
+
+.slide-prev, .slide-next {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  line-height: 50px;
+  text-align: center;
+  color: blueviolet;
+  cursor: pointer;
+  font-size: 24px;
+  background-color: #fff; }
+
+.slide-prev {
+  left: 20px; }
+
+.slide-next {
+  right: 20px; }
+
+.info-list {
+  padding: 0 45px; }
+  .info-list figure {
+    padding: 0 25px;
+    float: left;
+    width: 33.33333%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+  .info-list img {
+    width: 100%; }
+  .info-list figcaption {
+    margin-bottom: 11px;
+    padding: 24px 0 10px;
+    font-size: 18px;
+    border-bottom: 1px solid #d9d9d9; }
+  .info-list p {
+    line-height: 22px;
+    color: #a0a0a0; }
+
+.more-link {
+  display: block;
+  width: 108px;
+  height: 37px;
+  margin: 55px auto 90px;
+  border: 1px solid #e8e8e8;
+  border-radius: 100px;
+  line-height: 35px;
+  text-align: center;
+  color: #a0a0a0;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
+  .more-link:hover {
+    background-color: #01aab6;
+    color: #fff;
+    border-color: #01aab6; }
