@@ -296,6 +296,23 @@ body > footer {
     }
 }
 
+//加载提示
+@keyframes loading {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.loading-wait {
+    padding: 15px 0;
+    background-color: #f1f1f1;
+    text-align: center;
+    font-weight: normal;
+    .loading-icon {
+        margin-top: 15px;
+        // @include webkit(transform,rotate(0deg));
+        animation: loading 1s ease infinite;
+    }
+}
+
  //clearfix 清除浮动
  .clearfix:after {
      content: ".";

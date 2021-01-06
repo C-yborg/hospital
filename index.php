@@ -131,23 +131,7 @@
             <p class="column-dec">呵护牙齿健康  创造美好未来<span></span>care for teeth to create a better future</p>
         </div>
         <div class="info-list">
-            <ul class="clearfix">
-                <figure>
-                    <img src="./images/pic001.jpg" alt="朗朗口腔">
-                    <figcaption>朗朗口腔</figcaption>                                    
-                    <p>诊所内设有典雅舒适、风格各异的独立诊疗室，如奇趣可爱的儿童诊室、适应女性需求的Hello Kitty...</p>
-                </figure>
-                <figure>
-                    <img src="./images/pic001.jpg" alt="舒适的就诊环境">
-                    <figcaption>舒适的就诊环境</figcaption>                                    
-                    <p>诊所内设有典雅舒适、风格各异的独立诊疗室，如奇趣可爱的儿童诊室、适应女性需求的...</p>
-                </figure>
-                <figure>
-                    <img src="./images/pic001.jpg" alt="高端的诊疗设备">
-                    <figcaption>高端的诊疗设备</figcaption>                                    
-                    <p>朗朗口腔拥有全球先进口腔诊疗技术，引进国外多款高端的齿科诊疗设备。包括：德国进口种植机...</p>
-                </figure>
-            </ul>
+            <div id="infoListWrap"> </div>
             <a href="" class="more-link">查看更多</a>
         </div>
     </div>
@@ -224,6 +208,53 @@
             <div id="copyright">© 2005 - 2016 朗朗口腔医疗投资有限公司 版权所有 粤ICP备08130115号-1</div>
         </div>
     </footer>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
     <script src="./js/banner.js"></script>
+    <script>
+        loadingMsg({
+            wrap: 'infoListWrap',
+            message: '加载中'
+        });
+        $.ajax({
+            url: "./data/index.php",
+            dataType: "json",
+            async: true,
+            cache: true,
+            data: {
+                categoryId: 123456
+            },
+            type: "POST",
+            beforeSend: function() {},
+            success: function(req) { //请求成功时处理
+                let infoListWrap = document.getElementById('infoListWrap');
+                //判断数据是否存在
+                if(!req.data || req.data.length === 0){
+                    loadingMsg({
+                        wrap: 'infoListWrap',
+                        message: '当前数据为空'
+                    });
+                    return false;
+                }
+                // console.log(infoListWrap);
+                let ul = '<ul class="clearfix">';
+                req.data.forEach(item => {
+                    // console.log(item)
+                    ul += `<figure>
+                                <a href="newsDetail.php?${item.id}">
+                                <img src="${item.imgUrl}" alt="${item.title}">
+                                <figcaption>${item.title}</figcaption>                                    
+                                <p>${item.dec}</p>
+                                </a>
+                            </figure>`
+                })
+                ul += '</ul>';
+                //请求成功后 处理视图DOM渲染
+                infoListWrap.innerHTML = ul;
+            },
+            complete:function() {},
+            error: function() {},
+        })
+    </script>
 </body>
 </html>
