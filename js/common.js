@@ -1,5 +1,5 @@
 function loadingMsg(data) {
-    let wrap = document.getElementById(data.wrap)
+    let wrap = document.getElementById(data.id)
      console.log(data.message);
      //数据为空 取消加载动画
      if(data.message == '当前数据为空') {

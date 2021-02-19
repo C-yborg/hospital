@@ -1,3 +1,12 @@
+.info-list ul {
+  height: 1%; }
+  .info-list ul::after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
 #slide-wrap {
   position: relative;
   overflow: hidden; }
@@ -93,3 +102,154 @@
     background-color: #01aab6;
     color: #fff;
     border-color: #01aab6; }
+
+.welfare {
+  margin-bottom: 90px; }
+  .welfare header {
+    background-color: #efefef; }
+
+.welfare-wrap {
+  display: flex;
+  height: 570px; }
+  .welfare-wrap .row {
+    flex: 1; }
+  .welfare-wrap .row:last-child .content-flex-small {
+    order: 1; }
+  .welfare-wrap .row:last-child .content-flex-big {
+    order: 2; }
+  .welfare-wrap .content-flex {
+    display: flex;
+    height: 100%;
+    flex-direction: column; }
+  .welfare-wrap .content-flex-big {
+    flex: 2; }
+  .welfare-wrap .content-flex-small {
+    flex: 1; }
+  .welfare-wrap img {
+    display: block; }
+  .welfare-wrap .content-dec {
+    padding: 40px 48px 0 40px; }
+    .welfare-wrap .content-dec .title {
+      font-size: 24px; }
+    .welfare-wrap .content-dec time {
+      display: block;
+      padding: 14px 0 20px;
+      opacity: .5;
+      filter: alpha(opacity=50); }
+    .welfare-wrap .content-dec .line {
+      display: block;
+      width: 38px;
+      border-top: 1px solid #ccc; }
+    .welfare-wrap .content-dec .dec {
+      margin-top: 33px;
+      line-height: 24px; }
+    .welfare-wrap .content-dec .link-more {
+      margin-top: 16px; }
+  .welfare-wrap .color-white .title, .welfare-wrap .color-white time, .welfare-wrap .color-white .dec, .welfare-wrap .color-white .link-more {
+    color: #fff; }
+  .welfare-wrap .color-white .link-more {
+    border-color: #fff; }
+
+.doctor {
+  padding: 90px 0;
+  background-color: #f6f6f6; }
+  .doctor .img {
+    position: relative;
+    float: left; }
+  .doctor .content {
+    margin-left: 565px; }
+  .doctor .swiper-pagination {
+    left: 0;
+    right: 0;
+    top: 45px; }
+    .doctor .swiper-pagination span {
+      margin: 0 2px; }
+    .doctor .swiper-pagination .swiper-pagination-bullet {
+      width: 8px;
+      height: 3px;
+      background-color: #a0a0a0;
+      border-radius: 0;
+      opacity: 1;
+      filter: alpha(opacit=100); }
+    .doctor .swiper-pagination .swiper-pagination-bullet-active {
+      background: #000; }
+
+.doctor-info .name {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 48px;
+  margin-top: -24px;
+  padding: 0 28px;
+  background: rgba(0, 0, 0, 0.2);
+  line-height: 48px;
+  color: #fff;
+  font-size: 18px; }
+.doctor-info .title {
+  padding-top: 13px;
+  font-size: 18px; }
+.doctor-info .txt {
+  display: block;
+  padding: 12px 0 19px;
+  color: #a0a0a0; }
+.doctor-info .line {
+  display: block;
+  width: 38px;
+  border-top: 1px solid #c5c5c5; }
+.doctor-info .dec {
+  padding-top: 26px;
+  padding-bottom: 22px;
+  line-height: 21px;
+  color: #a0a0a0; }
+.doctor-info .link-more {
+  margin-left: -13px;
+  color: #010101;
+  font-weight: bold;
+  border: none; }
+
+.news-wrap {
+  padding-top: 73px;
+  overflow: hidden;
+  padding-bottom: 102px; }
+  .news-wrap .box {
+    margin-left: -15px;
+    margin-right: -15px; }
+  .news-wrap .item {
+    float: left;
+    width: 25%;
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box; }
+  .news-wrap img {
+    display: block;
+    width: 100%; }
+  .news-wrap .title {
+    padding-top: 25px;
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden; }
+  .news-wrap time {
+    display: block;
+    padding: 11px 0 13px;
+    color: #a0a0a0; }
+  .news-wrap .line {
+    display: block;
+    width: 50px;
+    border-top: 1px solid #d9d9d9; }
+  .news-wrap .dec {
+    padding-top: 15px;
+    margin-bottom: 22px;
+    line-height: 22px;
+    color: #a0a0a0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden; }
+  .news-wrap .link-more {
+    opacity: .4;
+    filter: alpha(opacity=40); }

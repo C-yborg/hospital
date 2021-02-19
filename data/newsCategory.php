@@ -3,19 +3,23 @@ $dataItem = null;
 $dataItem = array(
     array(
         'id' => 1,
-        'categoryName' => '行业动态'
+        'categoryName' => '行业动态',
+        'type' => 'industry'
     ),
     array(
         'id' => 2,
-        'categoryName' => '朗朗资讯'
+        'categoryName' => '朗朗资讯',
+        'type' => 'information'
     ),
     array(
         'id' => 3,
-        'categoryName' => '媒体报道'
+        'categoryName' => '媒体报道',
+        'type' => 'media'
     ),
     array(
         'id' => 4,
-        'categoryName' => '公益活动'
+        'categoryName' => '公益活动',
+        'type' => 'welfare'
     )
 );
 

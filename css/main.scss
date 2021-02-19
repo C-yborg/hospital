@@ -55,6 +55,7 @@
 //图文列表
 .info-list {
     padding: 0 45px;
+    ul { @extend %clearfix; }
     figure {
         padding: 0 25px;
         float: left;
@@ -92,5 +93,171 @@
         background-color: $color-main;
         color: #fff;
         border-color: $color-main;
+    }
+}
+
+// 朗朗公益
+.welfare {
+    margin-bottom: 90px;
+    header {
+        background-color: #efefef;
+    }
+}
+
+.welfare-wrap {
+    display: flex;
+    height: 570px;
+    .row {flex: 1;}
+    .row:last-child {
+        .content-flex-small { order: 1; }
+        .content-flex-big { order: 2; }
+    }
+    .content-flex {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
+    .content-flex-big {flex: 2;}
+    .content-flex-small {flex: 1;}
+    img { display: block; }
+    .content-dec {
+        padding: 40px 48px 0 40px;
+        .title {
+            font-size: 24px;
+        }
+        time { //time是内联元素 无法设置width 所以转为block
+            display: block;
+            padding: 14px 0 20px;
+            opacity: .5;
+            filter: alpha( opacity = 50 ); //ie浏览器兼容
+        }
+        .line { //i是内联元素 无法设置width 所以转为block
+            display: block;
+            width: 38px;
+            border-top: 1px solid #ccc;
+        }
+        .dec {
+            margin-top: 33px;
+            line-height: 24px;
+        }
+        .link-more { margin-top: 16px; }
+    }
+    .color-white {
+        .title, time, .dec, .link-more {color: #fff;}
+        .link-more { border-color: #fff; }
+    }
+}
+
+.doctor {
+    padding: 90px 0;
+    background-color: #f6f6f6;
+    .img {
+        position: relative;
+        float: left;
+    }
+    .content {
+        margin-left: 565px;
+    }
+    .swiper-pagination {
+        left: 0;
+        right: 0;
+        top: 45px;
+        span { margin: 0 2px; }
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 3px;
+            background-color: #a0a0a0;
+            border-radius: 0;
+            opacity: 1;
+            filter: alpha( opacit = 100 );
+        }
+        .swiper-pagination-bullet-active { background: #000; }
+    }
+}
+.doctor-info{
+    .name {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        height: 48px;
+        margin-top: -24px;
+        padding: 0 28px;
+        background: rgba(0,0,0,0.2);
+        line-height: 48px;
+        color: #fff;
+        font-size: 18px;
+    }
+    .title {
+        padding-top: 13px;
+        font-size: 18px;
+    }
+    .txt { 
+        display: block;
+        padding: 12px 0 19px;
+        color: $text-gray;
+     }
+    .line {
+        display: block;
+        width: 38px;
+        border-top: 1px solid #c5c5c5;
+    }
+    .dec {
+        padding-top: 26px;
+        padding-bottom: 22px;
+        line-height: 21px;
+        color: $text-gray;
+    }
+    .link-more {
+        margin-left: -13px;
+        color: $text-main;
+        font-weight: bold;
+        border: none;
+    }
+}
+
+//news-wrap
+.news-wrap {
+    padding-top: 73px;
+    overflow: hidden; //隐藏 .item超出的15px padding
+    .box {
+        margin-left: -15px;    //让两边贴着父元素两边
+        margin-right: -15px;
+    }
+    padding-bottom: 102px;
+    .item {
+        float: left;
+        width: 25%;
+        padding: 0 15px;
+        @include webkit(box-sizing,border-box);
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+    .title {
+        padding-top: 25px;
+        font-size: 18px;
+        @include ell(1);
+    }
+    time {
+        display: block;
+        padding: 11px 0 13px;
+        color: $text-gray;
+    }
+    .line {
+        display: block;
+        width: 50px;
+        border-top: 1px solid #d9d9d9;
+    }
+    .dec {
+        padding-top: 15px;
+        margin-bottom: 22px;
+        line-height: 22px;
+        color: $text-gray;
+        @include ell(2);
+    }
+    .link-more {
+        opacity: .4;
+        filter: alpha(opacity=40);
     }
 }

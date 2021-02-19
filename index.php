@@ -6,102 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./js/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./font/font-awesome-4.7.0/css/font-awesome.min.css">   
 </head>
 <body>
-    <div class="container">
-        <header class="clearfix">
-            <h1 class="logo pull-left">
-                <a href="./index.html" title="朗朗口腔" target="_blank">
-                    <img src="./images/logo.jpg" alt="朗朗口腔">
-                </a>
-            </h1>
-            <div class="pull-right">
-                <div class="pull-right">
-                    <div class="menu-link clearfix">
-                        <div class="lang">
-                            中文
-                            <ul>
-                                <a href="">中文</a>
-                                <a href="">英文</a>
-                            </ul>
-                        </div>
-                        <span class="link"></span>
-                        <a href="tel:0755-86566573" title="tel:0755-86566573">tel:0755-86566573</a>
-                        <span class="link"></span>
-                        <a href="index.html" title="朗朗口腔">朗朗口腔集团官网</a>
-                    </div>
-                    <nav>
-                        <ul class="clearfix">
-                            <li>
-                                <a href="index.html" title="首页">首页</a>
-                                <ul>
-                                    <li><a href="" title="朗朗简介">朗朗简介</a></li>
-                                    <li><a href="" title="朗朗优势">朗朗优势</a></li>
-                                    <li><a href="" title="朗朗团队">朗朗团队</a></li>
-                                    <li><a href="" title="朗朗历程">朗朗历程</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="" title="走进朗朗">走进朗朗</a>
-                                <ul>
-                                    <li><a href="" title="朗朗简介">朗朗简介</a></li>
-                                    <li><a href="" title="朗朗优势">朗朗优势</a></li>
-                                    <li><a href="" title="朗朗团队">朗朗团队</a></li>
-                                    <li>
-                                        <a href="" title="朗朗历程">朗朗历程</a>
-                                        <ul>
-                                            <li><a href="" title="朗朗简介">朗朗简介</a></li>
-                                            <li><a href="" title="朗朗优势">朗朗优势</a></li>
-                                            <li><a href="" title="朗朗团队">朗朗团队</a></li>
-                                            <li><a href="" title="朗朗历程">朗朗历程</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="" title="咨询动态">资讯动态</a>
-                                <ul>
-                                    <li><a href="" title="朗朗简介">朗朗简介</a></li>
-                                    <li><a href="" title="朗朗优势">朗朗优势</a></li>
-                                    <li><a href="" title="朗朗团队">朗朗团队</a></li>
-                                    <li><a href="" title="朗朗历程">朗朗历程</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="" title="合作伙伴">合作伙伴</a>
-                                <ul>
-                                    <li><a href="" title="朗朗简介">朗朗简介</a></li>
-                                    <li><a href="" title="朗朗优势">朗朗优势</a></li>
-                                    <li><a href="" title="朗朗团队">朗朗团队</a></li>
-                                    <li><a href="" title="朗朗历程">朗朗历程</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="" title="辅助功能">辅助功能</a>
-                                <ul>
-                                    <li><a href="" title="朗朗简介">朗朗简介</a></li>
-                                    <li><a href="" title="朗朗优势">朗朗优势</a></li>
-                                    <li><a href="" title="朗朗团队">朗朗团队</a></li>
-                                    <li><a href="" title="朗朗历程">朗朗历程</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="" title="联系我们">联系我们</a>
-                                <ul>
-                                    <li><a href="" title="朗朗简介">朗朗简介</a></li>
-                                    <li><a href="" title="朗朗优势">朗朗优势</a></li>
-                                    <li><a href="" title="朗朗团队">朗朗团队</a></li>
-                                    <li><a href="" title="朗朗历程">朗朗历程</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-    </div>
+    <!-- 头部 -->
+    <?php include('header.php')?>
     <!-- 幻灯片start -->
     <div id="slide-wrap">
         <div class="slide-content">
@@ -126,94 +37,148 @@
     <!-- 幻灯片end -->
     <!--  -->
     <div class="container">
-        <div class="main-column">
-            <h4 class="column-title">朗朗口腔</h4>
-            <p class="column-dec">呵护牙齿健康  创造美好未来<span></span>care for teeth to create a better future</p>
-        </div>
+    <!-- 朗朗口腔start -->
+        <section>
+            <header>
+                <div class="main-column padding-top-90 padding-bottom-70">
+                    <h3>朗朗口腔</h3>
+                    <p>呵护牙齿健康  创造美好未来<span></span>care for teeth to create a better future</p>
+                </div>
+            </header>
+        </section>
         <div class="info-list">
             <div id="infoListWrap"> </div>
             <a href="" class="more-link">查看更多</a>
         </div>
-    </div>
-    <footer>
-        <div class="container">
-            <div class="clearfix">
-                <div class="pull-left">
-                    <address class="footer-contact-info">
-                        <h5>朗朗医疗投资有限公司</h5>
-                        <p>集团总部热线 : <a href="tel:4000-890-608" title="4000-890-608">4000-890-608</a></p>
-                        <p>集团总部地址：广东省深圳市南山区高新南一道3号富诚大厦三楼</p>
-                    </address>
-                    <ul class="share clearfix">
-                        <a href="" class="sing-share">
-                            <p>
-                                <img src="images/code.jpg" alt="" style="width: 80px; height: 80px;">
-                            </p>
-                            <i class="fa fa-weibo"></i>
-                        </a>
-                        <a href="" class="wechat-share">
-                            <p>
-                                <img src="images/code.jpg" alt="" style="width: 80px; height: 80px;">
-                            </p>
-                            <i class="fa fa-weixin"></i>
-                        </a>
-                    </ul>
+        <!-- 朗朗口腔end -->
+
+        <!-- 朗朗公益start -->
+        <section class="welfare">
+            <header>
+                <div class="main-column padding-top-53 padding-bottom-53">
+                    <h3>朗朗公益</h3>
+                    <p>呵护牙齿健康  创造美好未来<span></span>care for teeth to create a better future</p>
                 </div>
-                <div class="pull-right">
-                    <ul class="footer-menu clearfix">
-                        <dl>
-                            <dt>走进朗朗</dt>
-                            <dd><a href="" title="朗朗简介">朗朗简介</a></dd>
-                            <dd><a href="" title="朗朗优势">朗朗优势</a></dd>
-                            <dd><a href="" title="企业荣誉">企业荣誉</a></dd>
-                            <dd><a href="" title="团队风采">团队风采</a></dd>
-                        </dl>
-                        <dl>
-                            <dt>资讯动态</dt>
-                            <dd><a href="" title="朗朗简介">行业动态</a></dd>
-                            <dd><a href="" title="朗朗优势">朗朗资讯</a></dd>
-                            <dd><a href="" title="企业荣誉">媒体报道</a></dd>
-                            <dd><a href="" title="团队风采">公共活动</a></dd>
-                        </dl>
-                        <dl>
-                            <dt>资讯动态</dt>
-                            <dd><a href="" title="朗朗简介">行业动态</a></dd>
-                            <dd><a href="" title="朗朗优势">朗朗资讯</a></dd>
-                            <dd><a href="" title="企业荣誉">媒体报道</a></dd>
-                            <dd><a href="" title="团队风采">公共活动</a></dd>
-                        </dl>
-                        <dl>
-                            <dt>资讯动态</dt>
-                            <dd><a href="" title="朗朗简介">行业动态</a></dd>
-                            <dd><a href="" title="朗朗优势">朗朗资讯</a></dd>
-                            <dd><a href="" title="企业荣誉">媒体报道</a></dd>
-                            <dd><a href="" title="团队风采">公共活动</a></dd>
-                        </dl>
-                        <dl>
-                            <dt>资讯动态</dt>
-                            <dd><a href="" title="朗朗简介">行业动态</a></dd>
-                            <dd><a href="" title="朗朗优势">朗朗资讯</a></dd>
-                            <dd><a href="" title="企业荣誉">媒体报道</a></dd>
-                            <dd><a href="" title="团队风采">公共活动</a></dd>
-                        </dl>
-                        <dl class="text-center">
-                            <div class="wechat-code">
-                                <img src="images/code.jpg" alt="手把手撸码前端">
-                                <p class="text-center">微信公众号</p>
+            </header>
+            <div class="welfare-wrap padding" id="welfareWrap"></div>
+        </section>
+        
+        <!-- 朗朗公益end -->
+
+
+    </div>
+
+    <!-- 医生模块start -->
+    <section class="doctor">
+        <header class="hide">
+            <div>
+                <h3>朗朗一生</h3>
+                <p>
+                    呵护牙齿健康 创造美好未来
+                    <span></span>
+                    care for teeth to create a better future
+                </p>
+            </div>
+        </header>
+        <div class="container">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="doctor-slide-item clearfix  doctor-info">
+                            <div class="img">
+                                <span class="name">方晓珍</span>
+                                <img src="images/pic005.jpg" alt="方晓珍">
                             </div>
-                        </dl>
-                    </ul>
+                            <div class="content">
+                                <h4 class="title">牙周主诊医师</h4>
+                                <span class="txt">擅长：仿真陶瓷牙修复、牙周系统治疗、残根残冠的保存治疗等。</span>
+                                <i class="line"></i>
+                                <p class="dec">国内知名大学口腔医学学士，曾就职于高端私人齿科工作室，从事口腔事业10余年，对口腔各类常见疾病的临床治疗积累了丰富经验。积极学习新技术的临床应用，不断进修提升，精通牙体保存治疗。数次参加北京医科大学牙周学习研究项目、香港大学牙周学习研究项目。技术上追求完美，坚持 “微创无痛治疗” 原则，深受患者的信赖！</p>
+                                <a href="" class="link-more">
+                                    查看更多<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="doctor-slide-item clearfix  doctor-info">
+                            <div class="img">
+                                <span class="name">方晓珍</span>
+                                <img src="images/pic005.jpg" alt="方晓珍">
+                            </div>
+                            <div class="content">
+                                <h4 class="title">牙周主诊医师</h4>
+                                <span class="txt">擅长：仿真陶瓷牙修复、牙周系统治疗、残根残冠的保存治疗等。</span>
+                                <i class="line"></i>
+                                <p class="dec">国内知名大学口腔医学学士，曾就职于高端私人齿科工作室，从事口腔事业10余年，对口腔各类常见疾病的临床治疗积累了丰富经验。积极学习新技术的临床应用，不断进修提升，精通牙体保存治疗。数次参加北京医科大学牙周学习研究项目、香港大学牙周学习研究项目。技术上追求完美，坚持 “微创无痛治疗” 原则，深受患者的信赖！</p>
+                                <a href="" class="link-more">
+                                    查看更多<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="doctor-slide-item clearfix  doctor-info">
+                            <div class="img">
+                                <span class="name">方晓珍</span>
+                                <img src="images/pic005.jpg" alt="方晓珍">
+                            </div>
+                            <div class="content">
+                                <h4 class="title">牙周主诊医师</h4>
+                                <span class="txt">擅长：仿真陶瓷牙修复、牙周系统治疗、残根残冠的保存治疗等。</span>
+                                <i class="line"></i>
+                                <p class="dec">国内知名大学口腔医学学士，曾就职于高端私人齿科工作室，从事口腔事业10余年，对口腔各类常见疾病的临床治疗积累了丰富经验。积极学习新技术的临床应用，不断进修提升，精通牙体保存治疗。数次参加北京医科大学牙周学习研究项目、香港大学牙周学习研究项目。技术上追求完美，坚持 “微创无痛治疗” 原则，深受患者的信赖！</p>
+                                <a href="" class="link-more">
+                                    查看更多<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="copyright">© 2005 - 2016 朗朗口腔医疗投资有限公司 版权所有 粤ICP备08130115号-1</div>
+            <!-- Add Pagination -->
+            <div class="p-r"><div class="swiper-pagination doctor-swiper-pagination"></div></div>
+
+
+
+
+
         </div>
-    </footer>
+    </section>
+    <!-- 医生模块end -->
+    <!-- 咨询动态start -->
+    <div class="container">
+        <section>
+            <header>
+                <div class="main-column padding-top-90 padding-bottom-40">
+                    <h3>资讯动态</h3>
+                    <p>呵护牙齿健康  创造美好未来<span></span>care for teeth to create a better future</p>
+                </div>
+            </header>
+            <ul class="tab-menu"></ul>
+            <!-- 行业动态 -->
+            <div id="tab-content-wrap">
+                <!-- <div id="industry"></div> -->
+                <!-- 朗朗资讯 -->
+                <!-- <div id="information" style="display:none;"></div> -->
+                <!-- 媒体报道 -->
+                <!-- <div id="media" style="display:none;"></div> -->
+                <!-- 公益活动 -->
+                <!-- <div id="welfare" style="display:none;"></div> -->
+            </div>
+        </section>
+    </div>
+    <!-- 咨询动态end -->
+    <?php include('footer.php')?>
     <script src="./js/jquery.min.js"></script>
+    <script src="./js/swiper/js/swiper.min.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/banner.js"></script>
+    <script src="./js/indexNewsAjax.js"></script>
+    <script src="./js/doctorSwiper.js"></script>
     <script>
         loadingMsg({
-            wrap: 'infoListWrap',
+            id: 'infoListWrap',
             message: '加载中'
         });
         $.ajax({
@@ -237,7 +202,7 @@
                     return false;
                 }
                 // console.log(infoListWrap);
-                let ul = '<ul class="clearfix">';
+                let ul = '<ul>';
                 req.data.forEach(item => {
                     // console.log(item)
                     ul += `<figure>
@@ -251,6 +216,72 @@
                 ul += '</ul>';
                 //请求成功后 处理视图DOM渲染
                 infoListWrap.innerHTML = ul;
+            },
+            complete:function() {},
+            error: function() {},
+        })
+
+        $.ajax({
+            url: "./data/index.php",
+            dataType: "json",
+            async: true,
+            cache: true,
+            data: {
+                module: 'welfare',
+                categoryId: 10000
+            },
+            type: "POST",
+            beforeSend: function() {},
+            success: function(req) { //请求成功时处理
+                console.log(req);
+                let data = req.data;
+                let html = '';
+                let welfareWrap = document.getElementById('welfareWrap');
+
+                //处理第一个
+                html += `
+                <div class="row">
+                    <div class="content-flex">
+                        <div class="content-flex-big">
+                            <img src="${data[0].imgUrl}" alt="${data[0].title}">
+                        </div>
+                        <div class="content-flex-small" style="background-color: #${data[0].bgColor};">
+                            <div class="content-dec">
+                                <h4 class="title">${data[0].title}</h4>
+                                <time datatime="${data[0].date}">${data[0].date}</time>
+                                <i class="line"></i>
+                                <a href="" class="link-more">
+                                    查看更多<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+
+                req.data.forEach((item, index) => {
+                    console.log(index);
+                    if(index != 0) {
+                        html += `<div class="row">
+                                    <div class="content-flex">
+                                        <div class="content-flex-big ${item.color}" style="background-color: #${item.bgColor};">
+                                            <div class="content-dec ">
+                                                <h4 class="title">${item.title}</h4>
+                                                <time datatime="${item.date}">${item.date}</time>
+                                                <i class="line"></i>
+                                                <p class="dec">${item.dec}</p>
+                                                <a href="" class="link-more">
+                                                    查看更多<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="content-flex-small">
+                                            <img src="${item.imgUrl}" alt="${item.title}">
+                                        </div>
+                                    </div>
+                                </div>`; 
+                    }
+                } )
+                welfareWrap.innerHTML = html;
             },
             complete:function() {},
             error: function() {},

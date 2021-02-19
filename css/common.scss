@@ -17,6 +17,14 @@
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 .text-center { text-align: center; }
+
+//display
+.hide {display: none;}
+
+//position
+.p-r{ position: relative; }
+.p-a { position: absolute; }
+
  //header
  .logo {
      margin: 30px 0;
@@ -123,6 +131,7 @@ nav {
         ul {
             display: none;
             position: absolute;
+            z-index: 100;
             a {
                 height: 41px;
                 color: #000;
@@ -277,9 +286,8 @@ body > footer {
 
 //主题内容标题
 .main-column {
-    padding: 90px  0 70px;
     text-align: center;
-    h4 {
+    h3 {
         font-size: 26px;
         font-weight: normal;
     }
@@ -313,6 +321,144 @@ body > footer {
     }
 }
 
+//查看更多 按钮
+.link-more {
+    display: block;
+    width: 92px;
+    height: 29px;
+    border: 1px solid #676767;
+    text-align: center;
+    line-height: 29px;
+    .fa {
+        position: relative;
+        left: 5px;
+    }
+}
+
+//tab-menu
+.tab-menu {
+    text-align: center;
+    a {
+        display: inline-block;
+        margin: 0 4px;
+        padding: 0 23px;
+        height: 32px;
+        line-height: 32px;
+        border: 1px solid #e2e2e2;
+        &.current {
+            background-color: $text-gray;
+            border-color: $text-gray;
+            color: #fff;
+        }
+    }
+}
+
+.crumbs {
+    padding: 80px 0;
+    background: url('../images/img.jpg') no-repeat center;
+    color: #fff;
+    .column-name {
+        margin-bottom: 13px;
+        font-size: 30px;
+    }
+    a { color: #fff; }
+}
+
+.category-menu{
+    border-bottom: 1px solid #f1f1f1;
+    li {
+        float: left;
+        margin-right: 18px;
+    }
+    a {
+        display: block;
+        line-height: 49px;
+        padding: 0 15px;
+        font-size: 14px;
+        margin-bottom: -1px;
+        &.current {
+            color: $color-main;
+            border-bottom: 1px solid $color-main;
+        }
+    }
+}
+  
+
+// 占位图显示
+.img-cover {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+//自动分列
+.row-container {
+    overflow: hidden;
+    .row-wrap { @extend %clearfix; }
+    &  div[class ^= col-item] {
+        float: left;
+        @include webkit(box-sizing,border-box);
+    }
+    &.gutter-15 {
+        &  div[class ^= col-item] { padding: 0 15px; }
+        .row-wrap { margin: 0 -15px; }
+    }
+    .col-item-3 {
+        width: 25%;
+    }
+    .col-item-4 {
+        width: 33.33333%;
+    }
+    .col-item-6 {
+        width: 50%;
+    }
+}
+
+
+// 图文内容区
+//news-wrap
+.figure-content {
+    padding-top: 73px;
+    overflow: hidden; //隐藏 .item超出的15px padding
+    .box {
+        margin-left: -15px;    //让两边贴着父元素两边
+        margin-right: -15px;
+    }
+    padding-bottom: 102px;
+    
+    img {
+        display: block;
+        width: 100%;
+    }
+    .title {
+        padding-top: 25px;
+        font-size: 18px;
+        @include ell(1);
+    }
+    time {
+        display: block;
+        padding: 11px 0 13px;
+        color: $text-gray;
+    }
+    .line {
+        display: block;
+        width: 50px;
+        border-top: 1px solid #d9d9d9;
+    }
+    .dec {
+        padding-top: 15px;
+        margin-bottom: 22px;
+        line-height: 22px;
+        color: $text-gray;
+        @include ell(2);
+    }
+    .link-more {
+        opacity: .4;
+        filter: alpha(opacity=40);
+    }
+}
+
  //clearfix 清除浮动
  .clearfix:after {
      content: ".";
@@ -324,3 +470,9 @@ body > footer {
 .clearfix{ display: inline-block; }
 * html .clearfix{ height: 1%; }
 .clearfix { display: block; }
+
+//for循环定义 padding 偏移值
+@for $i from 1 through 100 {
+    .padding-top-#{$i} { padding-top: (1px * $i); }
+    .padding-bottom-#{$i} { padding-bottom: (1px * $i); }
+}

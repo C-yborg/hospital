@@ -10,11 +10,30 @@ $text-gray: #a0a0a0;
 //主图宽度
 $container: 1200px;
 
+%clearfix {
+    height: 1%;
+    &::after {
+        content: '.';
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
 //定义浏览器内核属性
 @mixin webkit($type, $value) {
-    -webkit-#{$type}:$value;
-    -moz-#{$type}:$value;
-    -ms-#{$type}:$value;
-    -o-#{$type}:$value;
-    #{$type}:$value;
+    -webkit-#{$type}: $value;
+    -moz-#{$type}: $value;
+    -ms-#{$type}: $value;
+    -o-#{$type}: $value;
+    #{$type}: $value;
+}
+
+//文本超出， 省略号
+@mixin ell($number) {
+    display: -webkit-box;
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
